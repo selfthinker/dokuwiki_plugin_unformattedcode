@@ -1,0 +1,7 @@
+base     unformattedcode
+author   Anika Henke
+email    anika@selfthinker.org
+date     2011-05-12
+name     UnformattedCode Plugin
+desc     Overwrites the core ''monospace/code'' formatting to prevent text conversions (entities/typography) inside.
+url      http://dokuwiki.org/plugin:unformattedcode
