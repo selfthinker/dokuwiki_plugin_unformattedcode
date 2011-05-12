@@ -30,10 +30,16 @@ class syntax_plugin_unformattedcode extends DokuWiki_Syntax_Plugin {
      * Connect pattern to lexer
      */
     function connectTo($mode) {
-        $this->Lexer->addEntryPattern('\x27\x27(?=.*\x27\x27)',$mode,'plugin_unformattedcode');
+        $this->Lexer->addEntryPattern('\x22\x22(?=.*\x22\x22)',$mode,'plugin_unformattedcode'); // ""code""
+        if ($this->getConf('overwrite')) {
+            $this->Lexer->addEntryPattern('\x27\x27(?=.*\x27\x27)',$mode,'plugin_unformattedcode'); // ''code''
+        }
     }
     function postConnect() {
-        $this->Lexer->addExitPattern('\x27\x27', 'plugin_unformattedcode');
+        $this->Lexer->addExitPattern('\x22\x22', 'plugin_unformattedcode');
+        if ($this->getConf('overwrite')) {
+            $this->Lexer->addExitPattern('\x27\x27', 'plugin_unformattedcode');
+        }
     }
 
     /**
