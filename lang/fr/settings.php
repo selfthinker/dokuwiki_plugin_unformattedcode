@@ -7,3 +7,4 @@
  * @author Schplurtz le Déboulonné <schplurtz@laposte.net>
  */
 $lang['overwrite']             = 'Remplacer la syntaxe originale ?';
+$lang['doublequotes']          = 'Activer la syntaxe alternative ("") ?';

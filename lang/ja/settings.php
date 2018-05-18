@@ -6,3 +6,4 @@
  * @author Hideaki SAWADA <sawadakun@live.jp>
  */
 $lang['overwrite']             = '本体の構文を置換えますか？';
+$lang['doublequotes']          = '代替構文（""）を有効にしますか？';

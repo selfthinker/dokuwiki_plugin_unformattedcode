@@ -6,3 +6,4 @@
  * @author Arne Hanssen <arne.hanssen@getmail.no>
  */
 $lang['overwrite']             = 'Overskrive standard-syntaks?';
+$lang['doublequotes']          = 'Aktiver alternativ ("") syntaks?';

@@ -6,3 +6,4 @@
  * @author Tim Weinhold <tim.weinhold@gmail.com>
  */
 $lang['overwrite']             = 'Coresyntax überschreiben?';
+$lang['doublequotes']          = 'Alternative ("") Syntax aktivieren?';

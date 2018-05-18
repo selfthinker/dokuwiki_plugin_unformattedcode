@@ -4,3 +4,4 @@
  */
 
 $meta['overwrite'] = array('onoff');
+$meta['doublequotes'] = array('onoff');
