@@ -6,3 +6,4 @@
  * @author Aleksandr Selivanov <alexgearbox@yandex.ru>
  */
 $lang['overwrite']             = 'Переписать основной синтаксис?';
+$lang['doublequotes']          = 'Включить альтернативный синтаксис ("")?'
