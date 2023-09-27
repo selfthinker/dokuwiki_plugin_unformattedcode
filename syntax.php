@@ -6,10 +6,8 @@
  * @author     Anika Henke <anika@selfthinker.org>
  */
 
-if(!defined('DOKU_INC')) die();
 
-if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
-require_once(DOKU_PLUGIN.'syntax.php');
+use dokuwiki\Extension\SyntaxPlugin;
 
 class syntax_plugin_unformattedcode extends DokuWiki_Syntax_Plugin {
 
@@ -51,7 +49,7 @@ class syntax_plugin_unformattedcode extends DokuWiki_Syntax_Plugin {
                 return array($state);
 
             case DOKU_LEXER_UNMATCHED :
-                $handler->_addCall('cdata', array($match), $pos);
+                $handler->addCall('cdata', array($match), $pos);
                 return false;
 
             case DOKU_LEXER_EXIT :
@@ -63,10 +61,10 @@ class syntax_plugin_unformattedcode extends DokuWiki_Syntax_Plugin {
     /**
      * Create output
      */
-    function render($mode, Doku_Renderer $renderer, $indata) {
+    function render($mode, Doku_Renderer $renderer, $data) {
 
-        if (empty($indata)) return false;
-        list($state, $data) = $indata;
+        if (empty($data)) return false;
+        $state = $data[0];
 
         if($mode == 'xhtml'){
             switch ($state) {
